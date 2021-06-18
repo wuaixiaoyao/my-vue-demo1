@@ -1,3 +1,4 @@
+// [参考](https://cloud.tencent.com/developer/article/1553435)
 module.exports = function(plop) {
   plop.setGenerator("vue基础模板", {
     description: "创建vue文件",
