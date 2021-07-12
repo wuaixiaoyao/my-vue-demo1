@@ -1,11 +1,10 @@
 <template>
-    <div class='cmp-{{ name }}-wrapper' >
+    <div class='cmp-user' >
     </div>
 </template>
 <script>
 export default {
-    {{!-- todo 小驼峰 截取  为class --}}
-    name: '{{ name }}',
+    name: 'user',
     data(){
         return {}
     },
