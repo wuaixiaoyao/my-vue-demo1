@@ -14,12 +14,16 @@ module.exports = function(plop) {
         message: "请输入文件创建目录",
       },
     ],
-    actions: [
-      {
-        type: "add", // 动作类型
-        path: "{{ path }}/{{ name }}.vue", // '{{  }}' 双大括号内设置动态参数
-        templateFile: "../plop-templates/views/vue.hbs", // 模板文件地址， 使用hbs文件
-      },
-    ],
+    actions: () => {
+      const path = '{{path}}'
+      const name = '{{name}}'
+      return [
+        {
+          type: "add", // 动作类型
+          path: `${path}/${name}.vue`, // '{{  }}' 双大括号内设置动态参数
+          templateFile: "../plop-templates/views/vue.hbs", // 模板文件地址， 使用hbs文件
+        },
+      ]
+    },
   });
 };
